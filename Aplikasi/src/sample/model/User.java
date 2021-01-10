@@ -1,117 +1,59 @@
 package sample.model;
 
-public class User {
-    int id;
-    String name;
-    String gender;
-    int age;
-    String rank;
-    int power;
-    int money;
-    String party;
-    String username;
-    String password;
-    String status;
+import javafx.collections.ObservableList;
+import sample.utils.*;
 
-    public User(int id, String name, String gender, int age, String rank, int power, int money, String party, String username, String password) {
+public class User {
+    private int id;
+    private String name;
+    private String username;
+    private String password;
+    private String isAdmin;
+
+    //constructor
+    public User() { }
+
+    public User(int id, String name) {
         setId(id);
         setName(name);
-        setGender(gender);
-        setAge(age);
-        setRank(rank);
-        setPower(power);
-        setMoney(money);
-        setParty(party);
+    }
+
+    public User(String username, String password) {
+        setUsername(username);
+        setPassword(password)
+    }
+
+    public User(int id, String name, String isAdmin) {
+        setId(id);
+        setName(name);
+        setIsAdmin(isAdmin);
+    }
+
+    public User(int id, String name, String username, String password, String isAdmin) {
+        setId(id);
+        setName(name);
         setUsername(username);
         setPassword(password);
-
+        setIsAdmin(isAdmin);
     }
 
-    public String getRank() {
-        return rank;
-    }
+    //setter
+    public void setId(int id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
+    public void setUsername(String username) { this.username = username; }
+    public void setPassword(String password) { this.password = password; }
+    public void setIsAdmin(String isAdmin) { this.isAdmin = isAdmin; }
 
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
+    //getter
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
+    public String getIsAdmin() { return isAdmin; }
 
-    public int getPower() {
-        return power;
-    }
+    public Login() {
+        DBConnector dbOperator = new DBConnector();
 
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public int getMoney() {
-        return money;
-    }
-
-    public void setMoney(int money) {
-        this.money = money;
-    }
-
-    public String getParty() {
-        return party;
-    }
-
-    public void setParty(String party) {
-        this.party = party;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }
+
