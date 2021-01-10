@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homeHalaman" prefHeight="654.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.HomeAdminController">
+   <children>
+      <BorderPane fx:id="bpAdmin" layoutY="-23.0" prefHeight="607.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="67.0" prefWidth="881.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.599999999999994" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../images/icons8_google_photos_1000px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="67.0" layoutY="23.0" prefHeight="20.0" prefWidth="144.0" text="Hunter Guild App" textFill="WHITE">
+                     <font>
+                        <Font name="Bauhaus 93" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="782.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="65.0" prefWidth="112.0" styleClass="buttonExit" stylesheets="@../css/style.css" text="Logout" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_exit_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="40.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="10.0" text="Copyright @2020 " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </bottom>
+         <left>
+            <AnchorPane prefWidth="180.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="182.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="182.0" text="--" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="71.39994812011719" endY="-3.814697265625E-6" layoutX="107.0" layoutY="54.0" startX="-105.00001525878906" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <JFXButton fx:id="btnWelcome" alignment="CENTER" onAction="#handleClick" prefHeight="74.0" prefWidth="182.0" text="GUILD MASTER" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="42.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_brake_warning_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <effect>
+                              <GaussianBlur />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="btnListQuest" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#handleClick" prefHeight="74.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="List Quest" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_parchment_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnListMember" contentDisplay="TOP" layoutX="10.0" layoutY="86.0" onAction="#handleClick" prefHeight="74.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="List Member" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_add_user_group_man_man_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnListHerb" contentDisplay="TOP" layoutX="10.0" layoutY="160.0" onAction="#handleClick" prefHeight="74.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="List Herb" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_vegan_food_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnListGoods" contentDisplay="TOP" layoutX="10.0" layoutY="235.0" onAction="#handleClick" prefHeight="71.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="LIst Goods" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_new_product_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btnListMonster" contentDisplay="TOP" layoutX="10.0" layoutY="309.0" onAction="#handleClick" prefHeight="74.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="List Monster" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_cute_monster_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnTentang" contentDisplay="TOP" layoutX="10.0" layoutY="375.0" onAction="#handleClick" prefHeight="82.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="Tentang" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_about_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="526.0" prefWidth="711.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="pnWelcome" prefHeight="544.0" prefWidth="710.0" style="-fx-background-color: #ffff;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="38.0" layoutY="258.0" prefHeight="30.0" prefWidth="634.0" text="Welcome To Hunter Guild" textFill="#1dd1a1">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnStatus" prefHeight="58.0" prefWidth="711.0" style="-fx-background-color: #ffb142;">
+                     <children>
+                        <Label fx:id="ibStatus" layoutX="21.0" layoutY="15.0" text="LIst Quest">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <StackPane layoutX="1.0" layoutY="59.0" prefHeight="486.0" prefWidth="710.0">
+                     <children>
+                        <GridPane fx:id="pnTentang" layoutX="10.0" layoutY="10.0" prefHeight="466.0" prefWidth="702.0" style="-fx-background-color: #fff;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="469.79998168945315" minHeight="10.0" prefHeight="451.39995727539065" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="131.19995727539066" minHeight="10.0" prefHeight="73.00004272460933" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane fx:id="pnListHerb">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="424.20001831054685" minHeight="10.0" prefHeight="419.79998779296875" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="230.60001220703126" minHeight="10.0" prefHeight="50.20001220703125" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXButton onAction="#btnAddItemHerb" prefHeight="47.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Add Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_add_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="133.0" onAction="#btnUpdateItemHerb" prefHeight="38.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Update Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_update_file_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="264.0" onAction="#btnDeleteItemHerb" prefHeight="45.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Delete Item">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_delete_trash_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="tableHerb" onMouseClicked="#getSelectedHerb" prefHeight="414.0" prefWidth="674.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColHerb" prefWidth="88.8000625371933" text="ID" />
+                                    <TableColumn fx:id="nameColHerb" maxWidth="1.7976931348623157E308" prefWidth="125.60004425048828" text="Name" />
+                                    <TableColumn fx:id="rarityColHerb" maxWidth="1.7976931348623157E308" prefWidth="110.39996337890625" text="Rarity" />
+                                    <TableColumn fx:id="rankColHerb" maxWidth="1.7976931348623157E308" prefWidth="65.60003662109375" text="Rank" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane fx:id="formAddItemHerb" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="227.0" layoutY="118.0" prefHeight="191.0" prefWidth="246.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="66.0" prefWidth="62.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Rarity" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameAddHerb" prefHeight="26.0" prefWidth="123.0" />
+                                                <ComboBox fx:id="cbRarityAddHerb" prefWidth="150.0" />
+                                                <TextField fx:id="tfRankAddHerb" layoutX="10.0" layoutY="61.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Input a New Herb :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelAddHerb" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonHerb" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankAddHerb" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonHerb" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkAddHerb" layoutX="5.0" layoutY="149.0" onAction="#okButtonHerb" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formUpdateItemHerb" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="227.0" layoutY="118.0" prefHeight="191.0" prefWidth="246.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="66.0" prefWidth="62.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Rarity" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameUpdateHerb" prefHeight="26.0" prefWidth="123.0" />
+                                                <ComboBox fx:id="cbRarityUpdateHerb" prefWidth="150.0" />
+                                                <TextField fx:id="tfRankUpdateHerb" layoutX="10.0" layoutY="61.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Update the Selected Herb :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelUpdateHerb" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonHerb" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankUpdateHerb" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonHerb" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkUpdateHerb" layoutX="5.0" layoutY="149.0" onAction="#okButtonHerb" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="tfIdUpdateHerb" layoutX="174.0" layoutY="9.0" opacity="0.0" prefHeight="26.0" prefWidth="42.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="pnListQuest" prefHeight="496.0" prefWidth="702.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="431.4" minHeight="10.0" prefHeight="420.0000244140625" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="230.60001220703126" minHeight="10.0" prefHeight="51.19997558593752" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffff;" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXButton onAction="#btnAddItemQuest" prefHeight="50.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Add Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_add_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="118.0" onAction="#btnUpdateItemQuest" prefHeight="49.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Update Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_update_file_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="248.0" layoutY="1.0" onAction="#btnDeleteItemQuest" prefHeight="46.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Delete Item">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_delete_trash_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="questTable" onMouseClicked="#getSelectedQuest" prefHeight="414.0" prefWidth="683.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColQuest" maxWidth="1.7976931348623157E308" prefWidth="27.20001256465912" text="ID" />
+                                    <TableColumn fx:id="titleColQuest" maxWidth="1.7976931348623157E308" prefWidth="145.60004234313965" text="Title" />
+                                    <TableColumn fx:id="typeColQuest" maxWidth="1.7976931348623157E308" prefWidth="46.39996337890625" text="Type" />
+                                    <TableColumn fx:id="rankColQuest" maxWidth="1.7976931348623157E308" prefWidth="76.0" text="Rank" />
+                                    <TableColumn fx:id="objectColQuest" maxWidth="1.7976931348623157E308" prefWidth="126.39999389648438" text="Object" />
+                                    <TableColumn fx:id="capacityColQuest" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="80.79998779296875" text="Capacity" />
+                                    <TableColumn fx:id="powerColQuest" maxWidth="1.7976931348623157E308" prefWidth="74.39999389648438" text="Power" />
+                                    <TableColumn fx:id="rewardColQuest" maxWidth="1.7976931348623157E308" prefWidth="55.2000732421875" text="Reward" />
+                                    <TableColumn fx:id="statusColQuest" maxWidth="1.7976931348623157E308" prefWidth="73.5999755859375" text="Status" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane fx:id="formAddItemQuest" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="230.0" layoutY="44.0" prefHeight="355.0" prefWidth="249.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="200.0" prefWidth="46.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Title" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Type" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="28.0" text="Object" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="45.0" text="Capacity" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="63.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="80.0" text="Reward" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="98.0" text="Status" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="255.0" prefWidth="133.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfTitleQuestAdd" prefHeight="26.0" prefWidth="123.0" />
+                                                <ComboBox fx:id="cbTypeQuestAdd" prefWidth="150.0" />
+                                                <TextField fx:id="tfObjectQuestAdd" layoutX="10.0" layoutY="36.0" />
+                                                <TextField fx:id="tfCapacityQuestAdd" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfPowerQuestAdd" layoutX="10.0" layoutY="87.0" />
+                                                <TextField fx:id="tfRewardQuestAdd" layoutX="10.0" layoutY="112.0" />
+                                                <TextField fx:id="tfStatusQuestAdd" disable="true" layoutX="10.0" layoutY="138.0" />
+                                                <TextField fx:id="tfRankQuestAdd" layoutX="10.0" layoutY="227.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Enter a New Quest :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelAddQuest" layoutX="99.0" layoutY="315.0" onAction="#cancelButtonQuest" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkAddQuest" layoutX="10.0" layoutY="315.0" onAction="#okButtonQuest" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankAddQuest" layoutX="9.0" layoutY="274.0" onAction="#checkRankButtonQuest" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formUpdateItemQuest" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="230.0" layoutY="44.0" prefHeight="355.0" prefWidth="249.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="200.0" prefWidth="46.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Title" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Type" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="28.0" text="Object" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="45.0" text="Capacity" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="63.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="80.0" text="Reward" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="98.0" text="Status" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="255.0" prefWidth="133.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfTitleUpdateQuest" prefHeight="26.0" prefWidth="123.0" />
+                                                <ComboBox fx:id="cbTypeUpdateQuest" prefWidth="150.0" />
+                                                <TextField fx:id="tfObjectUpdateQuest" layoutX="10.0" layoutY="36.0" />
+                                                <TextField fx:id="tfCapacityUpdateQuest" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfPowerUpdateQuest" layoutX="10.0" layoutY="87.0" />
+                                                <TextField fx:id="tfRewardUpdateQuest" layoutX="10.0" layoutY="112.0" />
+                                                <TextField fx:id="tfStatusUpdateQuest" disable="true" layoutX="10.0" layoutY="138.0" />
+                                                <TextField fx:id="tfRankUpdateQuest" layoutX="10.0" layoutY="227.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Update the Selected  Quest" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelUpdateQuest" layoutX="99.0" layoutY="315.0" onAction="#cancelButtonQuest" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankUpdateQuest" layoutX="9.0" layoutY="274.0" onAction="#checkRankButtonQuest" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkUpdateQuest" layoutX="10.0" layoutY="315.0" onAction="#okButtonQuest" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="tfIdUpdateQuest" layoutX="163.0" layoutY="14.0" opacity="0.0" prefHeight="26.0" prefWidth="38.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="pnListGoods">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="425.6000122070312" minHeight="10.0" prefHeight="421.6000122070312" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="230.60001220703126" minHeight="10.0" prefHeight="49.59998779296876" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="66.0" prefWidth="702.0" style="-fx-background-color: #ffff;" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXButton onAction="#btnAddItemGoods" prefHeight="47.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Add Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_add_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="130.0" layoutY="1.0" onAction="#btnUpdateItemGoods" prefHeight="50.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Update Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_update_file_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="260.0" layoutY="1.0" onAction="#btnDeleteItemGoods" prefHeight="49.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Delete Item">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_delete_trash_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="goodsTable" onMouseClicked="#getSelectedGoods" prefHeight="414.0" prefWidth="674.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColGoods" prefWidth="80.80000340938568" text="ID" />
+                                    <TableColumn fx:id="nameColGoods" prefWidth="120.80005645751953" text="Name" />
+                                    <TableColumn fx:id="priceColGoods" prefWidth="109.5999755859375" text="Price" />
+                                    <TableColumn fx:id="rankColGoods" prefWidth="64.0" text="Rank" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane fx:id="formAddItemGoods" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="227.0" layoutY="118.0" prefHeight="191.0" prefWidth="246.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="66.0" prefWidth="77.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="Goods Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Goods Price" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameAddGoods" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField fx:id="tfPriceAddGoods" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfRankAddGoods" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Input a New Goods :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelAddGoods" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonGoods" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankAddGoods" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonGoods" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkAddGoods" layoutX="5.0" layoutY="149.0" onAction="#okButtonGoods" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formUpdateItemGoods" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="227.0" layoutY="118.0" prefHeight="191.0" prefWidth="246.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="66.0" prefWidth="77.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="Goods Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Goods Price" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameUpdateGoods" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField fx:id="tfPriceUpdateGoods" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfRankUpdateGoods" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Update the Selected Goods :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelUpdateGoods" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonGoods" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankUpdateGoods" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonGoods" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkUpdateGoods" layoutX="5.0" layoutY="149.0" onAction="#okButtonGoods" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="tfIdUpdateGoods" layoutX="173.0" layoutY="14.0" opacity="0.0" prefHeight="26.0" prefWidth="43.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="pnListMonster">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="428.20001831054685" minHeight="10.0" prefHeight="421.3999877929688" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="233.00000610351563" minHeight="10.0" prefHeight="48.60001220703123" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXButton onAction="#btnAddItemMonster" prefHeight="53.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Add Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_add_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="130.0" layoutY="3.0" onAction="#btnUpdateItemMonster" prefHeight="40.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Update Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_update_file_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="260.0" layoutY="-1.0" onAction="#btnDeleteItemMonster" prefHeight="54.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Delete Item">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_delete_trash_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="monsterTable" onMouseClicked="#getSelectedMonster" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="idColMonster" prefWidth="87.20002400875092" text="ID" />
+                                  <TableColumn fx:id="nameColMonster" prefWidth="134.40003204345703" text="Name" />
+                                    <TableColumn fx:id="powerColMonster" prefWidth="116.79998779296875" text="Power" />
+                                    <TableColumn fx:id="rankColMonster" prefWidth="69.5999755859375" text="Rank" />
+                                </columns>
+                              </TableView>
+                              <AnchorPane fx:id="formUpdateItemMonster" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="225.0" layoutY="118.0" prefHeight="191.0" prefWidth="250.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="9.0" layoutY="45.0" prefHeight="66.0" prefWidth="87.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="Monster Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Monster Power" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameUpdateMonster" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField fx:id="tfPowerUpdateMonster" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfRankUpdateMonster" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Update the Selected Monster :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelUpdateMonster" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonMonster" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankUpdateMonster" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonMonster" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkUpdateMonster" layoutX="5.0" layoutY="149.0" onAction="#okButtonMonster" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="tfIdUpdateMonster" layoutX="195.0" layoutY="14.0" opacity="0.0" prefHeight="26.0" prefWidth="39.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formAddItemMonster" prefHeight="422.0" prefWidth="716.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="225.0" layoutY="118.0" prefHeight="191.0" prefWidth="250.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="9.0" layoutY="45.0" prefHeight="66.0" prefWidth="87.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="Monster Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Monster Power" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="104.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameAddMonster" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField fx:id="tfPowerAddMonster" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfRankAddMonster" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Input a New Monster :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelAddMonster" layoutX="101.0" layoutY="149.0" onAction="#cancelButtonMonster" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankAddMonster" layoutX="5.0" layoutY="111.0" onAction="#checkRankButtonMonster" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkAddMonster" layoutX="5.0" layoutY="149.0" onAction="#okButtonMonster" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="pnListMember">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="429.79999389648435" minHeight="10.0" prefHeight="419.2000366210938" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="230.60001220703126" minHeight="10.0" prefHeight="51.19996337890626" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXButton onAction="#btnAddItemMember" prefHeight="46.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Add Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_add_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="130.0" onAction="#btnUpdateItemMember" prefHeight="46.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Update Item">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_update_file_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton layoutX="260.0" onAction="#btnDeleteItemMember" prefHeight="45.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="btnCrud" stylesheets="@../css/style.css" text="Delete Item">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_delete_trash_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="memberTable" onMouseClicked="#getSelectedMember" prefHeight="414.0" prefWidth="674.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColMember" minWidth="0.0" prefWidth="23.999969840049744" text="ID" />
+                                    <TableColumn fx:id="nameColMember" maxWidth="1.7976931348623157E308" prefWidth="104.8000545501709" text="Name" />
+                                    <TableColumn fx:id="genderColMember" maxWidth="1.7976931348623157E308" prefWidth="58.39996337890625" text="Gender" />
+                                    <TableColumn fx:id="ageColMember" maxWidth="1.7976931348623157E308" prefWidth="42.40008544921875" text="Age" />
+                                    <TableColumn fx:id="rankColMember" maxWidth="1.7976931348623157E308" prefWidth="58.39996337890625" text="Rank" />
+                                    <TableColumn fx:id="powerColMember" maxWidth="1.7976931348623157E308" prefWidth="66.39999389648438" text="Power" />
+                                    <TableColumn fx:id="moneyColMember" maxWidth="1.7976931348623157E308" prefWidth="94.39996337890625" text="Money" />
+                                    <TableColumn fx:id="partyColMember" maxWidth="1.7976931348623157E308" prefWidth="87.19985961914062" text="Party" />
+                                    <TableColumn fx:id="usernameColMember" maxWidth="1.7976931348623157E308" prefWidth="85.5999755859375" text="Username" />
+                                    <TableColumn fx:id="passwordColMember" maxWidth="1.7976931348623157E308" prefWidth="85.5999755859375" text="Password" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane fx:id="formUpdateItemMember" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="227.0" layoutY="31.0" prefHeight="381.0" prefWidth="246.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="14.0" layoutY="45.0" prefHeight="253.0" prefWidth="62.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Gender" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="28.0" text="Age" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="45.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="63.0" text="Money" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="80.0" text="Party" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="98.0" text="Username" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="212.0" text="Password" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="45.0" prefHeight="255.0" prefWidth="133.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameUpdateMember" prefHeight="26.0" prefWidth="123.0" />
+                                                <ComboBox fx:id="cbGenderUpdateMember" prefWidth="150.0" />
+                                                <TextField fx:id="tfAgeUpdateMember" layoutX="10.0" layoutY="36.0" />
+                                                <TextField fx:id="tfPowerUpdateMember" layoutX="10.0" layoutY="61.0" />
+                                                <TextField fx:id="tfMoneyUpdateMember" layoutX="10.0" layoutY="87.0" />
+                                                <TextField fx:id="tfPartyUpdateMember" layoutX="10.0" layoutY="112.0" />
+                                                <TextField fx:id="tfUsernameUpdateMember" layoutX="10.0" layoutY="138.0" />
+                                                <TextField fx:id="tfPasswordUpdateMember" layoutX="10.0" layoutY="227.0" />
+                                                <TextField fx:id="tfRankUpdateMember" layoutX="10.0" layoutY="240.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="9.0" layoutY="5.0" text="Update the Selected Member :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelUpdateMember" layoutX="101.0" layoutY="341.0" onAction="#cancelButtonMember" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRankUpdateMember" layoutX="9.0" layoutY="308.0" onAction="#checkRankButtonMember" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Check Rank" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkUpdateMember" layoutX="9.0" layoutY="341.0" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="tfIdUpdateMember" layoutX="184.0" layoutY="14.0" opacity="0.0" prefHeight="26.0" prefWidth="38.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formAddItemMember" prefHeight="200.0" prefWidth="200.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="225.0" layoutY="106.0" prefHeight="216.0" prefWidth="251.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="9.0" layoutY="29.0" prefHeight="140.0" prefWidth="62.0" spacing="16.0">
+                                             <children>
+                                                <Label text="Name" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Username" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="28.0" text="Password" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="45.0" text="Is Admin" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="101.0" layoutY="29.0" prefHeight="136.0" prefWidth="134.0" spacing="7.0">
+                                             <children>
+                                                <TextField fx:id="tfNameAddMember" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField fx:id="tfUsernameAddMember" layoutX="10.0" layoutY="227.0" />
+                                                <TextField fx:id="tfPasswordAddMember" layoutX="10.0" layoutY="240.0" />
+                                                <ComboBox fx:id="cbAdminAddMember" prefWidth="150.0" promptText="No" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="5.0" layoutY="5.0" text="Enter New User :" textFill="WHITE" />
+                                          <JFXButton fx:id="btnCancelAddMember" layoutX="101.0" layoutY="172.0" onAction="#cancelButtonMember" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnOkAddMember" layoutX="9.0" layoutY="172.0" onAction="#okButtonMember" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1DD1A1;" text="Ok" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

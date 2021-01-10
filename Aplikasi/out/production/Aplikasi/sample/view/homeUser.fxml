@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="654.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.HomeUserController">
+   <children>
+      <BorderPane fx:id="bpUser" layoutX="-6.0" prefHeight="654.0" prefWidth="881.0" style="-fx-background-color: #ffff;">
+         <top>
+            <AnchorPane prefHeight="67.0" prefWidth="881.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.599999999999994" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../images/icons8_google_photos_1000px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="67.0" layoutY="23.0" prefHeight="20.0" prefWidth="225.0" text="Hunter Guild Information" textFill="WHITE">
+                     <font>
+                        <Font name="Bauhaus 93" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="782.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="65.0" prefWidth="112.0" styleClass="buttonExit" stylesheets="@../css/style.css" text="Logout" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_exit_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefWidth="180.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="52.0" prefWidth="182.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="182.0" text="--" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="71.39994812011719" endY="-3.814697265625E-6" layoutX="107.0" layoutY="54.0" startX="-105.00001525878906" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <JFXButton fx:id="btnWelcomeUser" alignment="CENTER" onAction="#handleClickUser" prefHeight="70.0" prefWidth="182.0" text="GUILD MASTER" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="42.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_brake_warning_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <effect>
+                              <GaussianBlur />
+                           </effect>
+                        </JFXButton>
+                        <Line endX="73.99996948242188" endY="1.3999595642089844" startX="-105.00001525878906" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                        <JFXButton fx:id="btnListJobs" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#handleClickUser" prefHeight="74.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="List Jobs" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_task_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="260.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnTentangUser" contentDisplay="TOP" layoutX="10.0" layoutY="375.0" onAction="#handleClickUser" prefHeight="78.0" prefWidth="180.0" ripplerFill="WHITE" styleClass="btnMenu" stylesheets="@../css/style.css" text="Tentang" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_about_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Line endX="73.99996948242188" endY="1.3999595642089844" startX="-105.00001525878906" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <bottom>
+            <AnchorPane prefHeight="40.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="10.0" text="Copyright @2020 " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="547.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="pnTentangUser" prefHeight="545.0" prefWidth="711.0" style="-fx-background-color: #fff;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="177.60001220703126" minHeight="10.0" prefHeight="28.60000991821289" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="425.6000122070312" minHeight="10.0" prefHeight="424.0000366210937" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="61.600012207031284" minHeight="10.0" prefHeight="56.799963378906284" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane fx:id="ibTentangUser" prefHeight="57.0" prefWidth="694.0" style="-fx-background-color: #f9ca24;">
+                           <children>
+                              <Label layoutX="20.0" layoutY="18.0" prefHeight="20.0" prefWidth="195.0" text="Tentang App Hunter Guild">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+                  <AnchorPane fx:id="pnWelcomeUser" prefHeight="546.0" prefWidth="711.0" style="-fx-background-color: #ffff;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="38.0" layoutY="258.0" prefHeight="30.0" prefWidth="634.0" text="Welcome To Hunter Guild" textFill="#1dd1a1">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <GridPane fx:id="pnListJobs" prefHeight="545.0" prefWidth="712.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="489.1999572753906" minHeight="10.0" prefHeight="482.79999389648435" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="265.9999755859375" minHeight="10.0" prefHeight="62.0000061035156" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="62.0" prefWidth="698.0" style="-fx-background-color: #ffff;" GridPane.rowIndex="1">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="495.0" spacing="5.0">
+                                 <children>
+                                    <JFXButton onAction="#btnSoloQuest" prefHeight="61.0" prefWidth="130.0" styleClass="btnCrud" stylesheets="@../css/style.css" text="Solo Quest">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_user_100px_3.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnPartyQuest" prefHeight="62.0" prefWidth="148.0" styleClass="btnCrud" stylesheets="@../css/style.css" text="Party Quest">
+                                       <graphic>
+                                          <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_staff_100px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="62.0" layoutY="10.0" onAction="#btnActiveQuest" prefHeight="62.0" prefWidth="150.0" styleClass="btnCrud" stylesheets="@../css/style.css" text="Active Quest">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8_ok_100px_1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="pnPartyMember" layoutX="-1.0" layoutY="259.0" prefHeight="222.0" prefWidth="294.0" style="-fx-background-color: #ffff;">
+                                 <children>
+                                    <AnchorPane prefHeight="34.0" prefWidth="293.0" style="-fx-background-color: #ffc048;">
+                                       <children>
+                                          <Label layoutX="99.0" layoutY="7.0" text="Party Member">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <TableView fx:id="tablePartyMember" layoutY="34.0" prefHeight="188.0" prefWidth="294.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColPartyMember" prefWidth="28.79998815059662" text="Id" />
+                                          <TableColumn fx:id="nameColPartyMember" prefWidth="87.99999809265137" text="Name" />
+                                          <TableColumn fx:id="rankColPartyMember" prefWidth="80.00000762939453" text="Rank" />
+                                          <TableColumn fx:id="powerColPartyMember" prefWidth="85.60003662109375" text="Power" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pnSoloQuest" layoutX="294.0" prefHeight="170.0" prefWidth="414.0" style="-fx-background-color: #ffff;">
+                                 <children>
+                                    <AnchorPane prefHeight="34.0" prefWidth="417.0" style="-fx-background-color: #ffc048;">
+                                       <children>
+                                          <Label layoutX="127.0" layoutY="7.0" text="Recomended Solo Quest">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <TableView fx:id="tableSoloQuest" layoutY="35.0" prefHeight="135.0" prefWidth="417.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColSoloQuest" prefWidth="28.0" text="Id" />
+                                          <TableColumn fx:id="titleColSoloQuest" prefWidth="100.7999267578125" text="Title" />
+                                          <TableColumn fx:id="typeColSoloQuest" prefWidth="85.5999755859375" text="Type" />
+                                          <TableColumn fx:id="rankColSoloQuest" prefWidth="66.39999389648438" text="Rank" />
+                                          <TableColumn fx:id="powerColSoloQuest" prefWidth="59.199951171875" text="Power" />
+                                          <TableColumn fx:id="rewardColSoloQuest" prefWidth="63.2000732421875" text="Reward" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pnPartyQuest" layoutX="292.0" layoutY="170.0" prefHeight="162.0" prefWidth="415.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <AnchorPane layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="419.0" style="-fx-background-color: #ffc048;">
+                                       <children>
+                                          <Label layoutX="123.0" layoutY="7.0" text="Recomended Party Quest">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <TableView fx:id="tablePartyQuest" layoutX="1.0" layoutY="31.0" prefHeight="130.0" prefWidth="419.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColPartyQuest" prefWidth="32.79998779296875" text="Id" />
+                                          <TableColumn fx:id="titleColPartyQuest" prefWidth="80.79998779296875" text="Title" />
+                                          <TableColumn fx:id="typeColPartyQuest" prefWidth="80.79998779296875" text="Type" />
+                                          <TableColumn fx:id="rankColPartyQuest" prefWidth="60.800018310546875" text="Rank" />
+                                          <TableColumn fx:id="powerColPartyQuest" prefWidth="76.0" text="Power" />
+                                          <TableColumn fx:id="rewardColPartyQuest" prefWidth="76.0" text="Reward" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pnActiveQuest" layoutX="294.0" layoutY="328.0" prefHeight="154.0" prefWidth="414.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <AnchorPane layoutY="-3.0" prefHeight="34.0" prefWidth="419.0" style="-fx-background-color: #ffc048;">
+                                       <children>
+                                          <Label layoutX="148.0" layoutY="10.0" text="Your Active Quest">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <TableView fx:id="tableActiveQuest" layoutY="31.0" prefHeight="123.0" prefWidth="417.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColActiveQuest" prefWidth="31.20001220703125" text="Id" />
+                                          <TableColumn fx:id="titleColActiveQuest" prefWidth="80.800048828125" text="Title" />
+                                          <TableColumn fx:id="typeColActiveQuest" prefWidth="80.800048828125" text="Type" />
+                                          <TableColumn fx:id="rankColActiveQuest" prefWidth="66.39987182617188" text="Rank" />
+                                          <TableColumn fx:id="powerColActiveQuest" prefWidth="68.800048828125" text="Power" />
+                                          <TableColumn fx:id="rewardColActiveQuest" prefWidth="68.800048828125" text="Reward" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pnProfile" prefHeight="264.0" prefWidth="293.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <AnchorPane prefHeight="34.0" prefWidth="293.0" style="-fx-background-color: #ffc048;">
+                                       <children>
+                                          <Label layoutX="125.0" layoutY="7.0" text="Profile">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox layoutX="14.0" layoutY="50.0" prefHeight="139.0" prefWidth="70.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Name    :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="10.0" text="Gender  :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="28.0" text="Age       :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="45.0" text="Power   :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="63.0" text="Money  :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="80.0" text="Rank     :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="98.0" text="Party     :">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="77.0" layoutY="43.0" prefHeight="200.0" prefWidth="183.0" spacing="2.0">
+                                       <children>
+                                          <JFXTextField fx:id="tfNameProfile" />
+                                          <JFXTextField fx:id="tfGenderProfile" layoutX="10.0" layoutY="10.0" />
+                                          <JFXTextField fx:id="tfAgeProfile" layoutX="10.0" layoutY="36.0" />
+                                          <JFXTextField fx:id="tfPowerProfile" layoutX="10.0" layoutY="61.0" />
+                                          <JFXTextField fx:id="tfMoneyProfile" layoutX="10.0" layoutY="87.0" />
+                                          <JFXTextField fx:id="tfRankProfile" layoutX="10.0" layoutY="112.0" />
+                                          <JFXTextField fx:id="tfPartyProfile" layoutX="10.0" layoutY="138.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="formJobs">
+                           <children>
+                              <AnchorPane fx:id="formActiveQuest" prefHeight="482.0" prefWidth="712.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="231.0" layoutY="61.0" prefHeight="348.0" prefWidth="250.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="20.0" layoutY="45.0" prefHeight="219.0" prefWidth="76.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="ID" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Title" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="44.0" text="Rank" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="78.0" text="Object" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="112.0" text="Capacity" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="145.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="179.0" text="Reward" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="81.0" layoutY="45.0" prefHeight="222.0" prefWidth="154.0" spacing="7.0">
+                                             <children>
+                                                <TextField prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="61.0" />
+                                                <TextField layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="76.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="108.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="141.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="174.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="20.0" layoutY="14.0" text="Gathering Quest :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnCLoseActive" layoutX="151.0" layoutY="310.0" onAction="#btnCloseJobs" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Close" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnTakeActive" layoutX="20.0" layoutY="310.0" onAction="#btnTakeJobs" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #1DD1A1;" text="Take" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <Label layoutX="108.0" layoutY="278.0" text="User" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formSoloQuest" prefHeight="482.0" prefWidth="712.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="231.0" layoutY="61.0" prefHeight="348.0" prefWidth="250.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="20.0" layoutY="45.0" prefHeight="219.0" prefWidth="76.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="ID" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Title" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="44.0" text="Rank" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="78.0" text="Object" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="112.0" text="Capacity" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="145.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="179.0" text="Reward" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="81.0" layoutY="45.0" prefHeight="222.0" prefWidth="154.0" spacing="7.0">
+                                             <children>
+                                                <TextField prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="61.0" />
+                                                <TextField layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="76.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="108.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="141.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="174.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="20.0" layoutY="14.0" text="Subjugation Quest :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnCLoseSolo" layoutX="151.0" layoutY="310.0" onAction="#btnCloseJobs" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Close" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <Label layoutX="90.0" layoutY="278.0" text="Available" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnTakeSoloQuest" layoutX="20.0" layoutY="310.0" onAction="#btnTakeJobs" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #1DD1A1;" text="Take" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="formPartyQuest" prefHeight="482.0" prefWidth="712.0" styleClass="form" stylesheets="@../css/style.css">
+                                 <children>
+                                    <AnchorPane layoutX="231.0" layoutY="61.0" prefHeight="348.0" prefWidth="250.0" style="-fx-background-color: #57606f;">
+                                       <children>
+                                          <VBox layoutX="20.0" layoutY="45.0" prefHeight="219.0" prefWidth="76.0" spacing="16.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="84.0" text="ID" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="10.0" text="Title" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="44.0" text="Rank" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="78.0" text="Object" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="112.0" text="Capacity" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="145.0" text="Power" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="179.0" text="Reward" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="81.0" layoutY="45.0" prefHeight="222.0" prefWidth="154.0" spacing="7.0">
+                                             <children>
+                                                <TextField prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="61.0" />
+                                                <TextField layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="76.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="108.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="141.0" prefHeight="26.0" prefWidth="123.0" />
+                                                <TextField layoutX="10.0" layoutY="174.0" prefHeight="26.0" prefWidth="123.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="20.0" layoutY="14.0" text="Subjugation Quest :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnCLoseParty" layoutX="151.0" layoutY="310.0" onAction="#btnCloseJobs" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #1DD1A1;" text="Close" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnTakePartyQuest" layoutX="20.0" layoutY="310.0" onAction="#btnTakeJobs" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #1DD1A1;" text="Take" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <Label layoutX="90.0" layoutY="278.0" text="Available" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

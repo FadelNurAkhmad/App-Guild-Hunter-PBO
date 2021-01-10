@@ -1,0 +1,59 @@
+.btnLogin
+
+{
+    -fx-background-color : #303030;
+
+}
+
+.btnLogin:hover{
+    -fx-background-color : #7E354D;
+
+}
+
+.btnWelcome
+{
+    -fx-background-color : #95a5a6;
+}
+.btnTitleBar
+{
+
+    -fx-background-color :  transparent ;
+}
+
+.btnTitleBar:hover{
+    -fx-background-color : #E81123;
+
+}
+.btnCrud:hover{
+     -fx-background-color : #ced6e0;
+}
+
+.btnMenu
+{
+
+    -fx-background-color :  #1A1A1A ;
+
+}
+.form{
+    -fx-background-color: rgba(255, 255, 255, .5);
+}
+
+.btnMenu:hover{
+    -fx-background-color : #57606f;
+
+}
+
+.btnMenu:pressed{
+    -fx-background-color : #34495e;
+
+}
+
+.buttonExit
+
+{
+    -fx-background-color : transparent;
+}
+
+.buttonExit:hover{
+    -fx-background-color : #E81123;
+}
